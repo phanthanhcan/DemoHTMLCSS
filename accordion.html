@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+            src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body{
+            background-color: blue;
+            font-family:  'FontAwesome', sans-serif;
+        }
+        .accordion-main{
+            width: 95%;
+            max-width: 1000px;
+            margin: 0.2px auto;
+        }
+        .accordion-item{
+            background: #fff;
+            color: #000000;
+            margin: 0.2em 0;
+            border-radius: 0.5em;
+            box-shadow: 0 2px 20px 0 #cecccc;
+        }
+        .accordion-item-header{
+            padding: 0.5em 3em 0.5em 1em;
+            min-height: 3.5em;
+            line-height: 1.25em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+        }
+        .accordion-item-header::after{
+            content: "\f0da";
+            font-size: 1.5em;
+            position: absolute;
+            right: 1rem;
+            transform: rotate(0deg);
+            transition-duration: 0.5s;
+        }
+        .accordion-item-header.active::after {
+            /* content: "\2212"; */
+            transform: rotate(90deg);
+            transition-duration: 0.5s;
+        }
+        .accordion-item-body{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out ;
+        }
+        .accordion-item-body-content{
+            padding: 1em;
+            line-height: 1.5em;
+            border-top: 1px solid;
+            border-image: linear-gradient(to right, transparent, #34495e, transparent) 1 ;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body style="overflow: scroll;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2"></div>
+
+            <div class="col-10" style="border: 1px solid #00ffff;">
+                <div class="accordion-main">
+                    <div class="accordion-item">
+                        <div class="accordion-item-header">
+                            What is Web Development?
+                        </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Web Development broadly refers to the tasks associated with developing functional websites and applications for the Internet. The web development process includes web design, web content development, client-side/server-side scripting and network security configuration, among other tasks.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const accordionItemHeaders = document.querySelectorAll(".accordion-item-header")
+        accordionItemHeaders.forEach( accordionItemHeader =>{
+            accordionItemHeader.addEventListener(
+                "click", Event => {
+                    accordionItemHeader.classList.toggle("active");
+                    const accordionItemBody = accordionItemHeader.nextElementSibling;
+                    if(accordionItemHeader.classList.contains("active"))
+                    {
+                        accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+                    }   
+                    else
+                    {
+                        accordionItemBody.style.maxHeight = 0;
+                    }     
+                }
+            )
+
+        }  );    
+
+    </script>
+</body>
+</html>

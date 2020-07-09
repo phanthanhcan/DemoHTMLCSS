@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<style>
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+  }
+  body{
+    padding: 50px;
+    max-width: 1400px;
+    height: 100vh ;
+  }
+  .content{
+    width: 500px;
+    height: 500px;
+    border-color: aqua;
+    border-style: double;
+    border-width: 1px;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    /* text-align: center;
+    vertical-align: middle;
+    position: relative; */
+
+  }
+
+  .img{
+    /*position: absolute;
+    top: calc(50% - 50px); */
+    margin-left: auto;
+    margin-right: auto;
+    /* height: 75px;
+    width: 75px; */
+    height: 50%;
+    width: 50%;
+    background-color: rgb(128, 228, 62);
+    border-image-width: 0;
+    border: 0;
+    /* background-image: url('/dist/logo/evn-logo.png');
+    background-color: rgb(128, 228, 62);;
+    background-size: 75px 75px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center; */
+    /* border:  2px dashed black ; */
+  }
+  .nav-top{
+    display: grid;
+    grid-template-columns: 75px 1fr 100px;
+    grid-template-areas: "logo menu1 user-panel";
+    width: 100%;
+    min-height: 75px;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+  }
+  .logo{
+    grid-area: logo;
+    background-color: #9cd6d6;
+    height: 100%;
+    /* padding: 3px; */
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+  .menu1{
+    grid-area: menu1;
+    background-color: #00ffff;
+    height: 100%;
+  }
+  .user-panel{
+    grid-area: user-panel;
+    background-color: #bfd3d3;
+    height: 100%;
+  }
+
+</style>
+</head>
+  <body>
+    <!-- <div class="content">
+      <img class="img1" src="/dist/logo/evn-logo.png" alt="" srcset="">
+    </div> -->
+    <nav class="nav-top">
+      <div class="logo">
+        <img class="img" src="/dist/logo/evn-logo.png" alt="" srcset="">
+      </div>
+      <div class="menu1">
+
+      </div>
+      <div class="user-panel">
+
+      </div>
+    </nav>
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <script src="dist/js/metismenujs.js"></script>
+  <script src="dist/js/mm_metismenujs.js"></script>
+</body>
+</html>

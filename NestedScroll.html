@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/perfect-scrollbar/css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #content{
+            position: relative;
+            width: 300px;
+            height: 400px;
+            border: 3px solid hotpink;
+
+        }
+        #contentTop{
+            position: relative;
+            width: 290px;
+            height: 250px;
+            background-color:lawngreen;
+            margin-right: 50px;
+        }
+        #contentBottom{
+            position: relative;
+            width: 300px;
+            height: 250px;
+            background-color:lightseagreen;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="content">
+        <div id="contentTop">
+            <p>
+                Like you saw in the previous page, there are many properties to consider when dealing with borders.
+
+                To shorten the code, it is also possible to specify all the individual border properties in one property.
+                
+                The border property is a shorthand property for the following individual border properties:
+                Like you saw in the previous page, there are many properties to consider when dealing with borders.
+
+                To shorten the code, it is also possible to specify all the individual border properties in one property.
+                
+                The border property is a shorthand property for the following individual border properties:
+                Like you saw in the previous page, there are many properties to consider when dealing with borders.
+
+To shorten the code, it is also possible to specify all the individual border properties in one property.
+
+The border property is a shorthand property for the following individual border properties:
+            </p>
+        </div>
+        <div id="contentBottom">
+            <p>
+                Like you saw in the previous page, there are many properties to consider when dealing with borders.
+
+To shorten the code, it is also possible to specify all the individual border properties in one property.
+
+The border property is a shorthand property for the following individual border properties:
+            </p>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="/node_modules/perfect-scrollbar/dist/perfect-scrollbar.js"></script>
+    <script>
+        new PerfectScrollbar('#content');
+        new PerfectScrollbar('#contentTop');
+        new PerfectScrollbar('#contentBottom');
+    </script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+/*!
+* metismenujs - v1.1.0
+* A menu plugin
+* https://github.com/onokumus/metismenujs#readme
+*
+* Made by Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)
+* Under MIT License
+*/
+.metismenu .arrow {
+    float: right;
+    line-height: 1.42857; }
+  
+  *[dir="rtl"] .metismenu .arrow {
+    float: left; }
+  
+  /*
+   * Require Bootstrap 3.x
+   * https://github.com/twbs/bootstrap
+  */
+  .metismenu .glyphicon.arrow:before {
+    content: "\e079"; }
+  
+  .metismenu .mm-active > a > .glyphicon.arrow:before {
+    content: "\e114"; }
+  
+  /*
+   * Require Font-Awesome
+   * http://fortawesome.github.io/Font-Awesome/
+  */
+  .metismenu .fa.arrow::after {
+    content: "\f104"; }
+  
+  .metismenu .mm-active > a > .fa.arrow:after {
+    content: "\f107"; }
+  
+  /*
+   * Require Ionicons
+   * http://ionicons.com/
+  */
+  .metismenu .ion.arrow:before {
+    content: "\f3d2"; }
+  
+  .metismenu .mm-active > a > .ion.arrow:before {
+    content: "\f3d0"; }
+  
+  .metismenu .plus-times {
+    float: right; }
+  
+  *[dir="rtl"] .metismenu .plus-times {
+    float: left; }
+  
+  .metismenu .fa.plus-times:before {
+    content: "\f067"; }
+  
+  .metismenu .mm-active > a > .fa.plus-times {
+    transform: rotate(45deg); }
+  
+  .metismenu .plus-minus {
+    float: right; }
+  
+  *[dir="rtl"] .metismenu .plus-minus {
+    float: left; }
+  
+  .metismenu .fa.plus-minus:before {
+    content: "\f067"; }
+  
+  .metismenu .mm-active > a > .fa.plus-minus:before {
+    content: "\f068"; }
+  
+  .metismenu .mm-collapse:not(.mm-show) {
+    display: none; }
+  
+  .metismenu .mm-collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition-timing-function: ease;
+    transition-duration: 0.35s;
+    transition-property: height, visibility; }
+  
+  .metismenu .has-arrow {
+    position: relative; }
+  
+  .metismenu .has-arrow::after {
+    font-family: 'FontAwesome';
+    content: "\f0da";
+    float: right;
+
+  }
+  
+  .metismenu .mm-active > .has-arrow::after {
+    content: "\f0d7";
+  }
+  
+  
+  /*# sourceMappingURL=metismenujs.css.map */
+
+  .topbar-nav {
+    display: grid;
+    background: rgb(177, 111, 13);
+    position: relative;
+    min-height: 50px;
+    grid-template-columns: 50px 75px 1fr 75px 50px;
+    grid-template-areas: "metismenu nav-block logo  userPanel toggle";
+    
+}
+.logo{
+    grid-area: logo;
+    content: "logo";
+    margin:auto;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+    .logo .logo-img{
+        height: 47px;
+        width: 47px;
+        background-repeat: no-repeat;
+    }
+.userPanel{
+    grid-area: userPanel;
+    content: "logo";
+    height: 100%;
+    width: 100%;
+    display: block;
+    text-align: left;
+    padding: 15px 5px;
+}
+.toggle{    
+    grid-area: toggle;  
+    text-align: center;
+
+} 
+    .toggle-icon{    
+        display: table-cell;
+        vertical-align: middle; 
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        margin-right: 0;
+        margin-left: 0;
+    }
+        .toggle .toggle-icon .icon{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+.toggle .toggle-icon .icon::before{
+    font-family: 'FontAwesomeSolid';
+    content: "\f31e";
+    font-size: 2em;
+    color: black;
+    cursor: pointer;
+}
+.nav-block
+{
+    grid-area: nav-block;
+    display: block;
+    background-color: inherit;
+    height: 100%;
+    width: 100%;
+}
+.metismenu {
+    grid-area: metismenu;
+}
+.topbar-nav .metismenu {
+    position: absolute;
+    min-width: 230px;
+    top: calc( 100% + 1px); 
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: none;     /* display: flex;      */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+    .topbar-nav ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        background: rgb(177, 111, 13);
+    }
+    .topbar-nav .metismenu > li {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 0%;
+                flex: 1 1 0%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        position: relative;
+    }
+
+    .topbar-nav .metismenu a {
+        position: relative;
+        display: block;
+        padding: 15px;
+        color: #adb5bd;
+        outline-width: 0;
+        text-decoration: none;
+        transition: all .3s ease-out;
+        
+    }
+
+
+.topbar-nav .metismenu a:hover,
+.topbar-nav .metismenu a:focus,
+.topbar-nav .metismenu a:active {
+    color: #f8f9fa;
+    text-decoration: none;
+    background: #0b7285;
+}
+.responsive{
+    display: flex  !important;
+}
+@media (min-width: 750px) {
+/* @media only  screen and (min-width: 750px) { */
+    .topbar-nav{
+        min-height: 50px;
+    }
+    .nav-block{
+        display: none;
+    }
+    .toggle{
+        display: none;
+    }
+    .topbar-nav {
+        display: grid;
+        grid-template-columns: 50px 1fr 100px ;
+        grid-template-areas: "logo metismenu  userPanel";
+    }
+        .topbar-nav .metismenu {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            display: flex;
+            flex-direction: row;
+            justify-content:flex-start;
+            position: unset;
+            /* width: 100%; */
+        }
+
+            .topbar-nav .metismenu > li > ul {
+                position: absolute;
+                top: calc( 100% + 1px);
+                z-index: 1001;
+                min-width: 230px;
+
+            }
+
+        .topbar-nav .metismenu  li li {
+            position: relative;
+        }
+        .topbar-nav .metismenu  li li ul {
+            position: absolute;
+            top: 0px;
+            left: 231px;
+            z-index: 1001;
+            min-width: 230px;
+        }
+
+    .toggleButon{
+        display: none;
+    }
+    .topbar-nav .metismenu > .item-nav {
+        display: -webkit-inline-box;
+        display: -moz-inline-stack;
+        display: inline-block;
+        flex: none;
+        min-width: 150px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .topbar-nav .metismenu  .item-nav a {
+      height: 100%;
+  }
+
+}

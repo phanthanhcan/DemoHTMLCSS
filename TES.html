@@ -1,0 +1,558 @@
+<style>
+#demo {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  overflow: auto;
+}
+
+.scrollbar {
+margin-left: 30px;
+float: left;
+height: 300px;
+width: 65px;
+background: #fff;
+overflow-y: scroll;
+margin-bottom: 25px;
+}
+.force-overflow {
+min-height: 450px;
+}
+
+.scrollbar-primary::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #4285F4; }
+
+.scrollbar-danger::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-danger::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-danger::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #ff3547; }
+
+.scrollbar-warning::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-warning::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-warning::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #FF8800; }
+
+.scrollbar-success::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-success::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-success::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #00C851; }
+
+.scrollbar-info::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-info::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-info::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #33b5e5; }
+
+.scrollbar-default::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-default::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-default::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #2BBBAD; }
+
+.scrollbar-secondary::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-secondary::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
+
+.scrollbar-secondary::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #aa66cc; }
+</style>
+<div class="container-fluid" style="background-color: rgba(3, 169, 244, 0.1);">
+  <div class="row">
+    <div class="col-md-12 pt-5">
+      <h1 class="text-center">
+      Perfect Scrollbar
+    </h1>
+    <p class="text-center">
+      Minimalistic but perfect custom scrollbar plugin
+    </p>
+    
+    <div id="demo" class="mx-auto my-5">
+              <div class="p-5 white rgba-white-strong rounded" style="width:1200px;">
+            <h2 class="font-weight-bold text-center">Hello I'm a piece of example content!</h2>
+            <p class="lead mb-3 text-center ">You can just scroll through me and marvel at the perfection of this
+              scrollbar, but
+              I'm also full of surprises!</p>
+  
+            <section class="my-4">
+              <hr>
+              <div class="row mt-3 justify-content-center">
+                <div class="col-3">
+                  <!-- Card -->
+                  <div class="card">
+  
+                    <!-- Card image -->
+                    <div class="view overlay">
+                      <img class="card-img-top"
+                        src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img(89).jpg"
+                        alt="Card image cap">
+                      <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+  
+                    <!-- Card content -->
+                    <div class="card-body">
+  
+                      <!-- Title -->
+                      <h4 class="card-title">I'm a pretty card</h4>
+                      <!-- Text -->
+                      <p class="card-text">I'm very pretty and I have a pretty blue button, but it
+                        contains nothing,
+                        only
+                        animated waves. I'm a sad,
+                        pretty card.</p>
+                      <!-- Button -->
+                      <a href="#" class="btn btn-primary">Button</a>
+  
+                    </div>
+  
+                  </div>
+                  <!-- Card -->
+                </div>
+                <div class="col-3">
+                  <!-- Card -->
+                  <div class="card">
+  
+                    <!-- Card image -->
+                    <div class="view overlay">
+                      <img class="card-img-top"
+                        src="https://mdbootstrap.com/wp-content/uploads/2018/10/bootstrap.jpg"
+                        alt="Card image cap">
+                      <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+  
+                    <!-- Card content -->
+                    <div class="card-body">
+  
+                      <!-- Title -->
+                      <h4 class="card-title">I'm also pretty</h4>
+                      <!-- Text -->
+                      <p class="card-text">I'm very pretty and I have a pretty purple button, it
+                        contains a link to a
+                        <strong>Bootstrap tutorial</strong>. I'm a happy,
+                        pretty card.</p>
+                      <!-- Button -->
+                      <a href="https://mdbootstrap.com/education/bootstrap/"
+                        class="btn btn-deep-purple" target="_blank">Tutorial</a>
+  
+                    </div>
+  
+                  </div>
+                  <!-- Card -->
+                </div>
+                <div class="col-3">
+                  <!-- Card -->
+                  <div class="card">
+  
+                    <!-- Card image -->
+                    <div class="view overlay">
+                      <img class="card-img-top"
+                        src="https://mdbootstrap.com/img/Marketing/tutorials/jquery/admin.jpg"
+                        alt="Card image cap">
+                      <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+  
+                    <!-- Card content -->
+                    <div class="card-body">
+  
+                      <!-- Title -->
+                      <h4 class="card-title">I'm also happy</h4>
+                      <!-- Text -->
+                      <p class="card-text">I'm very pretty and I have a pretty mdb-color button. It'
+                        leads to
+                        <strong>Admin
+                          Dashboard building tutorial</strong>. I'm a happy,
+                        pretty card.</p>
+                      <!-- Button -->
+                      <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/admin-dashboard-introduction/"
+                        class="btn btn-mdb-color">Tutorial</a>
+  
+                    </div>
+  
+                  </div>
+                  <!-- Card -->
+                </div>
+                <div class="col-3">
+                  <!-- Card -->
+                  <div class="card">
+  
+                    <!-- Card image -->
+                    <div class="view overlay">
+                      <img class="card-img-top"
+                        src="https://mdbootstrap.com/img/Marketing/products/jquery/mdb-free.jpg"
+                        alt="Card image cap">
+                      <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+  
+                    <!-- Card content -->
+                    <div class="card-body">
+  
+                      <!-- Title -->
+                      <h4 class="card-title font-weight-bold">I made y'all</h4>
+                      <!-- Text -->
+                      <p class="card-text">I'm very pretty and my button let's you download a 
+                        <strong>free UI
+                          Kit</strong>
+                        with
+                        pretty, happy cards & over 500 of other material components!</p>
+                      <!-- Button -->
+                      <a target="_blank" href="https://mdbootstrap.com/docs/jquery/getting-started/download/"
+                        class="btn btn-success">Download</a>
+  
+                    </div>
+  
+                  </div>
+                  <!-- Card -->
+                </div>
+              </div>
+            </section>
+  
+            <section class="my-4 text-center">
+              <hr>
+              <h3>We are beautiful and colorful</h3>
+              <p class="lead mb-3">We are some material scrollbars that could help you make your apps and
+                projects even more
+                perfect!</p>
+              <a target="_blank" href="https://mdbootstrap.com/docs/jquery/javascript/scroll/"
+                class="btn btn-sm btn-primary rounded">Learn
+                more about us!</a>
+              <div class="row mt-3 justify-content-center">
+  
+                <div class="scrollbar scrollbar-primary">
+                  <div class="force-overflow"></div>
+                </div>
+                <div class="scrollbar scrollbar-secondary">
+                  <div class="force-overflow"></div>
+                </div>
+                <div class="scrollbar scrollbar-default">
+                  <div class="force-overflow"></div>
+                </div>
+                <div class="scrollbar scrollbar-info">
+                  <div class="force-overflow"></div>
+                </div>
+                <div class="scrollbar scrollbar-success">
+                  <div class="force-overflow"></div>
+                </div>
+                <div class="scrollbar scrollbar-warning">
+                  <div class="force-overflow"></div>
+                </div>
+  
+              </div>
+            </section>
+  
+            <section class="my-4 text-center">
+              <hr>
+              <h3>I'm a picture of a boar</h3>
+              <p class="lead mb-3">That's enough for me.</p>
+              <div class="row mt-3 justify-content-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Sus_scrofa_cristatus.jpg"
+                  class="img-fluid z-depth-1" alt="1">
+  
+              </div>
+            </section>
+  
+            <section class="my-4 text-center">
+              <hr>
+              <h3>I'm a basic Material Design sign-up form</h3>
+              <p class="lead mb-3">Click on my button to learn more about me!</p>
+              <div class="row mt-3 justify-content-center">
+                <!-- Default form register -->
+                <form class="text-center border border-light p-5">
+  
+                  <p class="h4 mb-4">Sign up</p>
+  
+                  <div class="form-row mb-4">
+                    <div class="col">
+                      <!-- First name -->
+                      <input type="text" id="defaultRegisterFormFirstName" class="form-control"
+                        placeholder="First name">
+                    </div>
+                    <div class="col">
+                      <!-- Last name -->
+                      <input type="text" id="defaultRegisterFormLastName" class="form-control"
+                        placeholder="Last name">
+                    </div>
+                  </div>
+  
+                  <!-- E-mail -->
+                  <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4"
+                    placeholder="E-mail">
+  
+                  <!-- Password -->
+                  <input type="password" id="defaultRegisterFormPassword" class="form-control"
+                    placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                  <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                    At least 8 characters and 1 digit
+                  </small>
+  
+                  <!-- Phone number -->
+                  <input type="text" id="defaultRegisterPhonePassword" class="form-control"
+                    placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+                  <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+                    Optional - for two step authentication
+                  </small>
+  
+                  <!-- Newsletter -->
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input"
+                      id="defaultRegisterFormNewsletter">
+                    <label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribe to
+                      our
+                      newsletter</label>
+                  </div>
+  
+                  <!-- Sign up button -->
+                  <a target="_blank" href="https://mdbootstrap.com/docs/jquery/forms/basic/"
+                    class="btn btn-info my-4 btn-block">LEARN MORE
+                    ABOUT ME</a>
+  
+                  <!-- Social register -->
+                  <p>or follow us on:</p>
+  
+                  <a target="_blank" href="https://www.facebook.com/mdbootstrap" class="light-blue-text mx-2">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a target="_blank" href="https://twitter.com/mdbootstrap" class="light-blue-text mx-2">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a target="_blank" href="https://www.linkedin.com/company/material-design-for-bootstrap/"
+                    class="light-blue-text mx-2">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a target="_blank" href="https://github.com/mdbootstrap" class="light-blue-text mx-2">
+                    <i class="fab fa-github"></i>
+                  </a>
+  
+                  <hr>
+  
+                  <!-- Terms of service -->
+                  <p>By clicking
+                    <em>Sign up</em> you agree to our
+                    <a href="" target="_blank">terms of service</a>
+  
+                </form>
+                <!-- Default form register -->
+  
+              </div>
+            </section>
+  
+            <section class="my-4 text-center">
+              <hr>
+              <h3>We are leading Web Development technologies</h3>
+              <p class="lead mb-3">Click on us if you're interested about learning more or getting our
+                beautiful components
+                for free.</p>
+              <div class="row mt-3 justify-content-center">
+                <div class="col-md-3">
+                  <!-- Card -->
+                  <div class="card card-image"
+                    style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+  
+                    <!-- Content -->
+                    <div
+                      class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                      <div>
+                        <a
+                          target="_blank" href="https://mdbootstrap.com/docs/jquery/"><img
+                            src="https://mdbootstrap.com/img/Marketing/general/logo/small/jquery.png"></a>
+                        <h3 class="card-title pt-2 font-weight-bold"><strong>jQuery</strong></h3>
+                        <p>Get beautiful components and useful features by clicking the button
+                          below.</p>
+                        <a target="_blank" href="https://mdbootstrap.com/docs/jquery/"
+                          class="btn btn-indigo"><i class="fas fa-clone left"></i>Learn more</a>
+                      </div>
+                    </div>
+  
+                  </div>
+                  <!-- Card -->
+                </div>
+                <div class="col-md-3">
+                  <!-- Card -->
+                  <div class="card card-image"
+                    style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+  
+                    <!-- Content -->
+                    <div
+                      class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                      <div>
+                        <a
+                          target="_blank" href="https://mdbootstrap.com/docs/angular/"><img
+                            src="https://mdbootstrap.com/img/Marketing/general/logo/small/angular.png"></a>
+                        <h3 class="card-title pt-2 font-weight-bold"><strong>Angular</strong></h3>
+                        <p>Get beautiful components and useful features by clicking the button
+                          below.</p>
+                        <a target="_blank" href="https://mdbootstrap.com/docs/angular/"
+                          class="btn btn-danger"><i class="fas fa-clone left"></i>Learn more</a>
+                      </div>
+                    </div>
+  
+                  </div>
+                  <!-- Card -->
+                </div>
+                <div class="col-md-3">
+                  <!-- Card -->
+                  <div class="card card-image"
+                    style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+  
+                    <!-- Content -->
+                    <div
+                      class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                      <div>
+                        <a
+                          target="_blank" href="https://mdbootstrap.com/docs/react/"><img
+                            src="https://mdbootstrap.com/img/Marketing/general/logo/small/react.png"></a>
+                        <h3 class="card-title pt-2 font-weight-bold"><strong>React</strong></h3>
+                        <p>Get beautiful components and useful features by clicking the button
+                          below.</p>
+                        <a target="_blank" href="https://mdbootstrap.com/docs/react/"
+                          class="btn btn-info"><i class="fas fa-clone left"></i>Learn more</a>
+                      </div>
+                    </div>
+  
+                  </div>
+                  <!-- Card -->
+                </div>
+                <div class="col-md-3">
+                  <!-- Card -->
+                  <div class="card card-image"
+                    style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+  
+                    <!-- Content -->
+                    <div
+                      class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                      <div>
+                        <a
+                          target="_blank" href="https://mdbootstrap.com/docs/vue/"><img
+                            src="https://mdbootstrap.com/img/Marketing/general/logo/small/vue.png"></a>
+                        <h3 class="card-title pt-2 font-weight-bold"><strong>Vue</strong></h3>
+                        <p>Get beautiful components and useful features by clicking the button
+                          below.</p>
+                        <a target="_blank" href="https://mdbootstrap.com/docs/vue/"
+                          class="btn btn-green"><i class="fas fa-clone left"></i>Learn more</a>
+                      </div>
+                    </div>
+  
+                  </div>
+                  <!-- Card -->
+                </div>
+  
+  
+              </div>
+            </section>
+  
+            <section class="my-4 text-center">
+              <hr>
+              <h3>I'm saying goodbye!</h3>
+              <p class="lead mb-3">Beeing scrolled by you was a pleasure, I hope I'll
+                see you soon at <a
+                  target="_blank" href="https://mdbootstrap.com/">mdbootstrap.com</a>
+              </p>
+            </section>
+  
+  
+  
+  
+          </div>
+    </div>
+    
+    <ul class="list-unstyled text-center mx-auto" style="max-width: 20em;">
+      <li>
+      <div class="md-form md-outline">
+            <input type="number" id="width" value="800" class="form-control">
+            <label for="width">Width</label>
+            </div>
+      </li>
+      <li>
+            <div class="md-form md-outline">
+            <input type="number" id="height" value="400" class="form-control">
+            <label for="height">Height</label>
+            </div>
+      </li>
+      <li>
+      <button id="resize" class="btn btn-primary btn-rounded mb-5">Change size<i class="fas fa-expand ml-2"></i></button>
+      </li>
+      <li>
+            <a target="_blank" href="https://mdbootstrap.com/freebies/perfect-scrollbar/" class="btn btn-sm btn-outline-primary btn-rounded"><i class="fas fa-caret-square-left mr-2"></i>Back to docs</a>
+      </li>
+    </ul>      
+    </div>    
+  </div>
+    <div class="row">
+    <div class="col-md-12 text-center mb-5">
+          <hr>
+      <h2>
+      Related
+      </h2>
+    <p class="text-center">
+      Useful assets related to Perfect Scrollbar
+    </p>
+      <a target="_blank" class="btn btn-secondary" href="https://mdbootstrap.com/docs/jquery/tables/scroll/#static-table-vertical-scroll">Table scroll</a>
+          <a target="_blank" class="btn btn-secondary" href="https://mdbootstrap.com/plugins/jquery/screen-scroller/">Full screen scroller</a>
+      <a target="_blank" class="btn btn-secondary" href="https://mdbootstrap.com/docs/jquery/navigation/scrollspy/">Scrollspy</a>
+  <a target="_blank" class="btn btn-secondary" href="https://mdbootstrap.com/docs/jquery/javascript/scroll/#smooth-scroll">Smooth scroll</a>
+  <a target="_blank" class="btn btn-danger" href="https://mdbootstrap.com/docs/jquery/javascript/scroll/#material">Material scrollbars</a>
+    </div>
+  </div>
+  </div>
